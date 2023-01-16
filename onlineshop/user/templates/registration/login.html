@@ -1,0 +1,12 @@
+{% extends 'theme.html' %}
+{% load static %}
+{% block content %}
+
+<form method="POST" enctype="multipart/form-data">
+   {% csrf_token %}
+   {{ form }}
+   <input type="submit" class="btn btn-dark btn-block" value="LOGIN"/>
+</form>
+   
+                    
+{% endblock %} 

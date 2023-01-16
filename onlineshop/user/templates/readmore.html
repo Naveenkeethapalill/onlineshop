@@ -1,0 +1,18 @@
+{% extends 'theme.html' %}
+{% load static %}
+{% block content %}
+
+
+{% csrf_token %}
+
+    <img src="{{product.image.url}}" alt="" style="height: 500px;">
+    <div class="product_data" style="float: right; margin-right: 400px; margin-top: 50px;">
+         <h5>{{product.name}}</h5>
+         <h4>{{product.price}}</h4>
+    </div>
+    <div class="addtocart" style="float: right; margin-right: 320px; margin-top: -350px;">
+        <button type="button" class="btn btn-lg btn-success"><a href="{% url 'cart_add' product.id %}">Add TO CART</a></button>
+    </div>
+
+
+{% endblock %}                                                                                                      

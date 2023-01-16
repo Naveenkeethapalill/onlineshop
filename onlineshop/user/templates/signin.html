@@ -1,0 +1,15 @@
+{% extends 'theme.html' %}
+{% load static %}
+{% block content %}
+{% load crispy_forms_filters %}
+
+
+    <h1>Create New Account</h1>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input type="submit" class="btn btn-dark btn-block" value="Create New Account"/>
+    </form>
+
+
+{% endblock %} 
